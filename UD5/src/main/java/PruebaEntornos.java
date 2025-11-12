@@ -10,8 +10,11 @@ public class PruebaEntornos {
         System.out.print("Introduce tu año de nacimiento:");
         int anyo = sc.nextInt();
 
-        int edad = anio - anyo;
+        
         System.out.println("Año actual: " + anio);
+        LocalDateTime fechaActual = LocalDateTime.now();
+        int edad = fechaActual.getYear() - anyo;
+        System.out.println("---------------------------");
         if (edad > 18) {
             System.out.println("Eres mayor de edad");
         } else {
